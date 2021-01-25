@@ -164,11 +164,12 @@ TrainerModel::SentencePieces Trainer::MakeSeedSentencePieces() const {
     substr_index.emplace_back(i, score);
   }
 
+  // TODO
   // all_chars must be included in the seed sentencepieces.
   TrainerModel::SentencePieces seed_sentencepieces;
-  for (const auto &it : Sorted(all_chars)) {
-    seed_sentencepieces.emplace_back(it);
-  }
+  // for (const auto &it : Sorted(all_chars)) {
+  //   seed_sentencepieces.emplace_back(it);
+  // }
 
   // Sort by the coverage of sub strings.
   for (const auto &p : Sorted(substr_index)) {
